@@ -41,6 +41,10 @@ _docx_extract/
 _docx_tmp.zip
 _test-*.mp3
 
+# 根目录 IP 素材包（体积大；运行所需视频已在 public/avatar）
+/IP透明背景.rar
+/IP透明背景/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
