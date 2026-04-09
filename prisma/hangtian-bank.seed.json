@@ -1,0 +1,738 @@
+[
+  {
+    "question": "中天火箭公司的全称是什么？",
+    "optionA": "陕西中天火箭技术股份有限公司",
+    "optionB": "西安中天火箭科技有限公司",
+    "optionC": "陕西中天火箭有限责任公司",
+    "optionD": "陕西航天火箭技术有限公司",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司在哪个证券交易所上市？",
+    "optionA": "上海证券交易所",
+    "optionB": "深圳证券交易所",
+    "optionC": "北京证券交易所",
+    "optionD": "香港联交所",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司的股票代码是多少？",
+    "optionA": "003009",
+    "optionB": "300009",
+    "optionC": "002009",
+    "optionD": "603009",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司成立于哪一年？",
+    "optionA": "2000年",
+    "optionB": "2002年",
+    "optionC": "2005年",
+    "optionD": "2008年",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司总部位于哪个城市？",
+    "optionA": "北京",
+    "optionB": "上海",
+    "optionC": "西安",
+    "optionD": "成都",
+    "correctOption": "C"
+  },
+  {
+    "question": "中天火箭公司隶属于哪一级航天单位？",
+    "optionA": "航天科技集团一院",
+    "optionB": "航天科技集团四院",
+    "optionC": "航天科技四十一所",
+    "optionD": "航天科技集团五院",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司的企业性质是什么？",
+    "optionA": "国有独资",
+    "optionB": "国有控股上市公司",
+    "optionC": "民营上市公司",
+    "optionD": "中外合资",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司的英文缩写是什么？",
+    "optionA": "CASC",
+    "optionB": "ZTRT",
+    "optionC": "ZTHJ",
+    "optionD": "SZRT",
+    "correctOption": "C"
+  },
+  {
+    "question": "中天火箭公司注册地址在哪个区？",
+    "optionA": "灞桥区",
+    "optionB": "长安区",
+    "optionC": "蓝田县",
+    "optionD": "高新区",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司的主营业务不包括以下哪项？",
+    "optionA": "人工影响天气装备",
+    "optionB": "小型固体火箭",
+    "optionC": "汽车发动机",
+    "optionD": "炭/炭复合材料",
+    "correctOption": "C"
+  },
+  {
+    "question": "中天火箭公司是哪一年上市的？",
+    "optionA": "2019年",
+    "optionB": "2020年",
+    "optionC": "2021年",
+    "optionD": "2022年",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司的注册资本约为多少？",
+    "optionA": "5000万元",
+    "optionB": "1亿元",
+    "optionC": "1.55亿元",
+    "optionD": "2亿元",
+    "correctOption": "C"
+  },
+  {
+    "question": "中天火箭公司所属集团的全称是什么？",
+    "optionA": "中国航天科技集团有限公司",
+    "optionB": "中国航天科工集团有限公司",
+    "optionC": "中国航空工业集团有限公司",
+    "optionD": "中国电子科技集团有限公司",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司的官方微信公众号名称是什么？",
+    "optionA": "中天火箭",
+    "optionB": "中天火箭公司",
+    "optionC": "天箭之声",
+    "optionD": "航天中天",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司生产产品不包括什么？",
+    "optionA": "增雨防雹火箭",
+    "optionB": "一次性细胞培养袋",
+    "optionC": "无人机巢",
+    "optionD": "光伏板",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司旗下子公司不包括以下哪个？",
+    "optionA": "超码科技",
+    "optionB": "三沃化学",
+    "optionC": "三沃机电",
+    "optionD": "新疆中天",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司总部办公区主要位于？",
+    "optionA": "航天基地",
+    "optionB": "蓝田工业园",
+    "optionC": "高新区锦业路",
+    "optionD": "灞桥区",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司现有员工总数大约？",
+    "optionA": "200-300人",
+    "optionB": "400-600人",
+    "optionC": "800-1000人",
+    "optionD": "1200人以上",
+    "correctOption": "C"
+  },
+  {
+    "question": "中天火箭公司“十五五”规划启动年份是？",
+    "optionA": "2025年",
+    "optionB": "2026年",
+    "optionC": "2027年",
+    "optionD": "2028年",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司最核心的人影产品是什么？",
+    "optionA": "增雨防雹火箭",
+    "optionB": "人影无人机",
+    "optionC": "森林灭火弹",
+    "optionD": "探空火箭",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司的人工影响天气火箭用于？",
+    "optionA": "人工增雨、防雹",
+    "optionB": "人工消雾",
+    "optionC": "人工降雪",
+    "optionD": "以上都是",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司的“WR”系列火箭主要用于？",
+    "optionA": "气象探测",
+    "optionB": "增雨防雹",
+    "optionC": "军事训练",
+    "optionD": "科学实验",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司子公司超码科技主要生产什么？",
+    "optionA": "炭/炭复合材料",
+    "optionB": "钨铜合金",
+    "optionC": "铝合金",
+    "optionD": "钛合金",
+    "correctOption": "A"
+  },
+  {
+    "question": "超码科技的炭/炭热场材料主要应用于哪个行业？",
+    "optionA": "光伏",
+    "optionB": "互联网",
+    "optionC": "汽车",
+    "optionD": "航空航天",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司生产的森林灭火装置属于哪类产品？",
+    "optionA": "火箭弹",
+    "optionB": "无人机",
+    "optionC": "发射架",
+    "optionD": "烟炉",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司的探空火箭装备主要用于？",
+    "optionA": "大气探测",
+    "optionB": "雷达探测",
+    "optionC": "海洋探测",
+    "optionD": "地理探测",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司研发的TL系列产品属于？",
+    "optionA": "小型制导火箭",
+    "optionB": "探空火箭",
+    "optionC": "气象火箭",
+    "optionD": "反坦克火箭",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司生产的钨铜触头用于什么设备？",
+    "optionA": "高压开关",
+    "optionB": "变压器",
+    "optionC": "电机",
+    "optionD": "电容器",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司入选国资委十大党建品牌的名称是？",
+    "optionA": "红色航天",
+    "optionB": "驭天砺箭·云帆先锋",
+    "optionC": "人影先锋",
+    "optionD": "天箭堡垒",
+    "correctOption": "B"
+  },
+  {
+    "question": "中天火箭公司的企业使命是什么？",
+    "optionA": "航天科技创造美好生活",
+    "optionB": "科技强军，航天报国",
+    "optionC": "服务国家防灾减灾",
+    "optionD": "以上都是",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司的企业精神主要传承自？",
+    "optionA": "两弹一星精神",
+    "optionB": "载人航天精神",
+    "optionC": "航天传统精神",
+    "optionD": "以上都是",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司的AI虚拟形象叫什么？",
+    "optionA": "龙小曦",
+    "optionB": "小天",
+    "optionC": "火火",
+    "optionD": "天箭",
+    "correctOption": "A"
+  },
+  {
+    "question": "中天火箭公司党委“五个托底”不包括？",
+    "optionA": "质量",
+    "optionB": "能力",
+    "optionC": "廉洁",
+    "optionD": "创新",
+    "correctOption": "D"
+  },
+  {
+    "question": "中天火箭公司团委曾组织过什么特色活动？",
+    "optionA": "草坪音乐会",
+    "optionB": "航天科普进校园",
+    "optionC": "青年座谈会",
+    "optionD": "以上都是",
+    "correctOption": "D"
+  },
+  {
+    "question": "2026年“中国航天日”是第几个中国航天日？",
+    "optionA": "第九个",
+    "optionB": "第十个",
+    "optionC": "第十一个",
+    "optionD": "第十二个",
+    "correctOption": "C"
+  },
+  {
+    "question": "2026年“中国航天日”的主题是什么？",
+    "optionA": "海上生明月，九天揽星河",
+    "optionB": "极目楚天，共襄星汉",
+    "optionC": "七秩问天路，携手探九霄",
+    "optionD": "格物致知，叩问苍穹",
+    "correctOption": "C"
+  },
+  {
+    "question": "2026年“中国航天日”主场活动将在哪个城市举行？",
+    "optionA": "北京市",
+    "optionB": "上海市",
+    "optionC": "武汉市",
+    "optionD": "成都市",
+    "correctOption": "D"
+  },
+  {
+    "question": "2026年是中国航天事业创建多少周年？",
+    "optionA": "60周年",
+    "optionB": "65周年",
+    "optionC": "70周年",
+    "optionD": "75周年",
+    "correctOption": "C"
+  },
+  {
+    "question": "2026年“中国航天日”宣传海报征集的主题为“七秩问天路，携手探九霄”，其中的“七秩”指什么？",
+    "optionA": "中国航天日设立七周年",
+    "optionB": "中国航天事业创建70周年",
+    "optionC": "第七届中国航天日",
+    "optionD": "七个航天重大工程",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天日是为纪念中国航天事业成就而设立，具体日期是哪一天？",
+    "optionA": "4月24日",
+    "optionB": "10月15日",
+    "optionC": "10月16日",
+    "optionD": "12月20日",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国第一颗人造地球卫星的名称是什么？",
+    "optionA": "实践一号",
+    "optionB": "风云一号",
+    "optionC": "东方红一号",
+    "optionD": "长征一号",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国第一颗人造地球卫星是在哪一年成功发射的？",
+    "optionA": "1968年",
+    "optionB": "1969年",
+    "optionC": "1970年",
+    "optionD": "1971年",
+    "correctOption": "C"
+  },
+  {
+    "question": "东方红一号卫星是在哪个发射场发射升空的？",
+    "optionA": "太原卫星发射中心",
+    "optionB": "西昌卫星发射中心",
+    "optionC": "酒泉卫星发射中心",
+    "optionD": "文昌航天发射场",
+    "correctOption": "C"
+  },
+  {
+    "question": "搭载东方红一号卫星的运载火箭是什么？",
+    "optionA": "长征二号",
+    "optionB": "长征三号",
+    "optionC": "长征一号",
+    "optionD": "长征五号",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国成为世界上第几个独立研制并发射人造地球卫星的国家？",
+    "optionA": "第三个",
+    "optionB": "第四个",
+    "optionC": "第五个",
+    "optionD": "第六个",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国第一位进入太空的航天员是谁？",
+    "optionA": "费俊龙",
+    "optionB": "聂海胜",
+    "optionC": "翟志刚",
+    "optionD": "杨利伟",
+    "correctOption": "D"
+  },
+  {
+    "question": "杨利伟乘坐的载人飞船是？",
+    "optionA": "神舟五号",
+    "optionB": "神舟六号",
+    "optionC": "神舟七号",
+    "optionD": "神舟九号",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国首次实现航天员太空出舱活动的是神舟几号？",
+    "optionA": "神舟五号",
+    "optionB": "神舟六号",
+    "optionC": "神舟七号",
+    "optionD": "神舟八号",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国首次实现航天员手控交会对接的是神舟几号？",
+    "optionA": "神舟八号",
+    "optionB": "神舟九号",
+    "optionC": "神舟十号",
+    "optionD": "神舟十一号",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国空间站的核心舱名称是什么？",
+    "optionA": "问天实验舱",
+    "optionB": "梦天实验舱",
+    "optionC": "天和核心舱",
+    "optionD": "天宫二号",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国探月工程被称为？",
+    "optionA": "天宫工程",
+    "optionB": "北斗工程",
+    "optionC": "嫦娥工程",
+    "optionD": "神舟工程",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国首颗绕月探测卫星是？",
+    "optionA": "嫦娥一号",
+    "optionB": "嫦娥二号",
+    "optionC": "嫦娥三号",
+    "optionD": "嫦娥四号",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国首次实现月球背面软着陆的探测器是？",
+    "optionA": "嫦娥三号",
+    "optionB": "嫦娥四号",
+    "optionC": "嫦娥五号",
+    "optionD": "嫦娥六号",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国首次在月球表面取回土壤样本并返回地球的是？",
+    "optionA": "嫦娥四号",
+    "optionB": "嫦娥五号",
+    "optionC": "嫦娥六号",
+    "optionD": "天问一号",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国首次火星探测任务命名为什么？",
+    "optionA": "天问一号",
+    "optionB": "祝融号",
+    "optionC": "嫦娥五号",
+    "optionD": "火星一号",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国火星车上搭载的火星车名称是什么？",
+    "optionA": "天问号",
+    "optionB": "祝融号",
+    "optionC": "羲和号",
+    "optionD": "玉兔号",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国首个火星探测器天问一号是在哪一年成功着陆火星的？",
+    "optionA": "2020年",
+    "optionB": "2021年",
+    "optionC": "2022年",
+    "optionD": "2023年",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国载人航天工程是哪一年正式立项实施的？",
+    "optionA": "1990年",
+    "optionB": "1992年",
+    "optionC": "1995年",
+    "optionD": "1999年",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国第一位女性航天员是谁？",
+    "optionA": "王亚平",
+    "optionB": "刘洋",
+    "optionC": "刘旺",
+    "optionD": "张陆",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国首位在太空授课的航天员是谁？",
+    "optionA": "刘洋",
+    "optionB": "王亚平",
+    "optionC": "陈冬",
+    "optionD": "聂海胜",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天史上第一次完成空间交会对接的是哪艘飞船与天宫一号？",
+    "optionA": "神舟八号",
+    "optionB": "神舟九号",
+    "optionC": "神舟十号",
+    "optionD": "神舟十一号",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国航天员中，目前在舱外执行任务次数最多的是？",
+    "optionA": "杨利伟",
+    "optionB": "聂海胜",
+    "optionC": "景海鹏",
+    "optionD": "张陆",
+    "correctOption": "D"
+  },
+  {
+    "question": "中国航天员在空间站外进行出舱活动时穿着的航天服叫什么？",
+    "optionA": "舱内航天服",
+    "optionB": "飞天舱外航天服",
+    "optionC": "舱内压力服",
+    "optionD": "航天飞行服",
+    "correctOption": "B"
+  },
+  {
+    "question": "搭载神舟飞船的运载火箭是？",
+    "optionA": "长征二号F运载火箭",
+    "optionB": "长征三号乙运载火箭",
+    "optionC": "长征五号运载火箭",
+    "optionD": "长征七号运载火箭",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国北斗卫星导航系统是哪种定位系统？",
+    "optionA": "全球定位系统",
+    "optionB": "区域定位系统",
+    "optionC": "局域定位系统",
+    "optionD": "近地轨道通信系统",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国第一枚运载火箭的型号是？",
+    "optionA": "长征一号",
+    "optionB": "长征二号",
+    "optionC": "长征三号",
+    "optionD": "长征四号",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国航天日的设立是为了纪念哪一重要事件？",
+    "optionA": "神舟五号首次载人飞行成功",
+    "optionB": "东方红一号卫星成功发射",
+    "optionC": "嫦娥一号成功绕月",
+    "optionD": "北斗系统全面建成",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国月球探测工程“三步走”战略的第三步是？",
+    "optionA": "绕月探测",
+    "optionB": "落月探测",
+    "optionC": "月球采样返回",
+    "optionD": "载人登月",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国首次实现月球背面软着陆后，月球车“玉兔二号”在哪个区域活动？",
+    "optionA": "风暴洋",
+    "optionB": "冯·卡门撞击坑",
+    "optionC": "哥白尼环形山",
+    "optionD": "静海基地",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天史上第一次完成火箭海上发射是哪个型号？",
+    "optionA": "长征五号",
+    "optionB": "长征十一号",
+    "optionC": "长征七号",
+    "optionD": "长征三号乙",
+    "correctOption": "B"
+  },
+  {
+    "question": "神舟飞船返回舱着陆地点主要位于？",
+    "optionA": "内蒙古四子王旗着陆场",
+    "optionB": "新疆和田着陆场",
+    "optionC": "甘肃酒泉着陆场",
+    "optionD": "青海格尔木着陆场",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国“天舟”系列飞船的主要任务是什么？",
+    "optionA": "载人飞行",
+    "optionB": "货运补给",
+    "optionC": "空间实验",
+    "optionD": "卫星部署",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天事业的奠基人、被誉为“中国航天之父”的是谁？",
+    "optionA": "钱学森",
+    "optionB": "孙家栋",
+    "optionC": "任新民",
+    "optionD": "屠守锷",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国首任载人航天工程总设计师是谁？",
+    "optionA": "王永志",
+    "optionB": "戚发轫",
+    "optionC": "刘纪原",
+    "optionD": "沈荣骏",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国航天员在太空中睡觉时？",
+    "optionA": "固定在睡袋中",
+    "optionB": "漂浮在任何地方",
+    "optionC": "系在座椅上",
+    "optionD": "不需要睡觉",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国第一颗通信卫星的名称是？",
+    "optionA": "东方红二号",
+    "optionB": "东方红三号",
+    "optionC": "风云一号",
+    "optionD": "实践一号",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国“天问一号”火星探测器于哪一年发射？",
+    "optionA": "2019年",
+    "optionB": "2020年",
+    "optionC": "2021年",
+    "optionD": "2022年",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天员在空间站中进行的“天宫课堂”主要目的是？",
+    "optionA": "航天器维修训练",
+    "optionB": "航天科普教育",
+    "optionC": "科学实验数据采集",
+    "optionD": "娱乐休闲活动",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天器在轨飞行时，太阳能帆板的作用是？",
+    "optionA": "通信",
+    "optionB": "姿态控制",
+    "optionC": "提供电力",
+    "optionD": "热控",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国“墨子号”量子科学实验卫星主要研究的是什么？",
+    "optionA": "暗物质探测",
+    "optionB": "量子通信",
+    "optionC": "引力波探测",
+    "optionD": "黑洞观测",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国“悟空号”探测卫星主要用于？",
+    "optionA": "黑洞成像",
+    "optionB": "宇宙线观测",
+    "optionC": "暗物质粒子探测",
+    "optionD": "太阳耀斑观测",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国首个商业航天发射场中，位于？",
+    "optionA": "酒泉卫星发射中心",
+    "optionB": "太原卫星发射中心",
+    "optionC": "西昌卫星发射中心",
+    "optionD": "文昌航天发射场",
+    "correctOption": "D"
+  },
+  {
+    "question": "中国航天测控任务由哪支船队承担？",
+    "optionA": "雪龙号",
+    "optionB": "远望号",
+    "optionC": "大洋号",
+    "optionD": "向阳红号",
+    "correctOption": "B"
+  },
+  {
+    "question": "月球与地球之间的平均距离约为？",
+    "optionA": "3.84万公里",
+    "optionB": "38.4万公里",
+    "optionC": "384万公里",
+    "optionD": "3840公里",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国“高分”系列卫星的主要用途是？",
+    "optionA": "高分遥感观测",
+    "optionB": "气象预报",
+    "optionC": "通信中继",
+    "optionD": "导航定位",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国航天器返回时，使用什么技术减速？",
+    "optionA": "反推火箭",
+    "optionB": "降落伞",
+    "optionC": "空气阻力",
+    "optionD": "三者结合",
+    "correctOption": "D"
+  },
+  {
+    "question": "中国航天员在轨期间，每天需要锻炼多长时间以对抗失重环境？",
+    "optionA": "0.5-1小时",
+    "optionB": "1-2小时",
+    "optionC": "2-3小时",
+    "optionD": "3-4小时",
+    "correctOption": "B"
+  },
+  {
+    "question": "中国航天员在太空中喝的水从哪里来？",
+    "optionA": "从地面携带",
+    "optionB": "由天舟货运飞船运送",
+    "optionC": "由空间站水回收系统循环利用",
+    "optionD": "以上都是",
+    "correctOption": "D"
+  },
+  {
+    "question": "中国“鹊桥”中继卫星的主要作用是什么？",
+    "optionA": "为月球背面探测提供通信中继",
+    "optionB": "为火星探测提供导航",
+    "optionC": "为空间站提供宽带通信",
+    "optionD": "为卫星互联网提供支持",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国载人航天“三步走”战略的第三步是？",
+    "optionA": "突破载人航天基本技术",
+    "optionB": "建立空间实验室",
+    "optionC": "建设长期有人照料的空间站",
+    "optionD": "实现载人登月",
+    "correctOption": "C"
+  },
+  {
+    "question": "中国航天员在空间站内进行科学实验，主要依靠什么装置？",
+    "optionA": "空间科学实验柜",
+    "optionB": "便携式实验箱",
+    "optionC": "舱外实验平台",
+    "optionD": "自动实验机器人",
+    "correctOption": "A"
+  },
+  {
+    "question": "中国“龙”系列运载火箭主要用于？",
+    "optionA": "国家重大航天工程",
+    "optionB": "商业卫星发射",
+    "optionC": "载人航天任务",
+    "optionD": "深空探测任务",
+    "correctOption": "B"
+  }
+]

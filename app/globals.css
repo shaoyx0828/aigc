@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  /**
+   * 视频主持人外框底色（与页面一致）。黑底 MP4 由 Canvas 亮度抠像去背，不再铺纯黑底。
+   */
+  --avatar-video-matte: var(--background);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100dvh;
+  min-height: 100svh;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+/* 避免 iOS 横竖屏与地址栏伸缩时横向溢出 */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   在线答题页：左主区限宽 + 侧栏题号卡片 + 下方透明场景数字人（无独立主持卡片；≥1200px 双栏）
+   -------------------------------------------------------------------------- */
+@layer components {
+  .quiz-page {
+    @apply relative w-full;
+  }
+
+  .quiz-main-layout {
+    display: grid;
+    width: 100%;
+    align-items: start;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-main-layout {
+      column-gap: 1.5rem;
+      row-gap: 1.5rem;
+      /* 桌面端左侧留出约 2cm 空白（更精致、不贴边） */
+      padding-left: 76px;
+      grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
+    }
+  }
+
+  .quiz-content {
+    @apply flex min-w-0 flex-col text-left;
+    width: 100%;
+    max-width: min(100%, 880px);
+    justify-self: start;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-content {
+      gap: 1.25rem;
+    }
+  }
+
+  .quiz-sidebar {
+    @apply flex min-h-0 min-w-0 flex-col;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-sidebar {
+      gap: 1rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-sidebar {
+      position: sticky;
+      top: 6rem;
+      max-height: calc(100dvh - 6.5rem);
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .quiz-number-card {
+    @apply shrink-0 rounded-xl border border-slate-200/90 bg-white shadow-sm;
+    padding: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-number-card {
+      padding: 1rem;
+    }
+  }
+
+  /**
+   * 数字人场景区：无卡片、无标题、透明底，贴在侧栏下半，像融入页面背景的角色（非 fixed）
+   */
+  .quiz-avatar-scene {
+    @apply z-0 flex w-full flex-col items-center justify-end bg-transparent;
+    flex: 1 1 auto;
+    min-height: 0;
+    padding-top: 0.25rem;
+  }
+
+  /* 手机端放到题目上方时更小、更紧凑 */
+  .quiz-avatar-scene--mobile {
+    flex: 0 0 auto;
+    /*
+     * 可视槽位要略高于「缩放后人物」的包围盒，否则 translateY + overflow:hidden 会拦腰裁切。
+     * 可视高度：净 +4.5cm（从下沿再收短 0.5cm）。
+     */
+    min-height: min(calc(11vh + 4.5cm), calc(100px + 4.5cm));
+    margin-top: 0.125rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1199px) {
+    .quiz-avatar-scene {
+      flex: 0 0 auto;
+      min-height: min(30vh, 200px);
+      margin-top: 0.125rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-avatar-scene {
+      /* 右侧人物在桌面端“更小但更完整”：更高、更窄，靠右贴底 */
+      align-self: end;
+      max-width: 360px;
+      min-height: min(56vh, 560px);
+      padding-top: 0.5rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  /* 视频数字人：随断点缩放，桌面略收敛避免「顶满」 */
+  .quiz-avatar-dock-root {
+    @apply relative z-0 flex w-full flex-col items-center justify-end;
+    min-height: min(28vh, 200px);
+  }
+
+  @media (min-width: 768px) {
+    .quiz-avatar-dock-root {
+      min-height: min(34vh, 280px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-avatar-dock-root {
+      /* 让人物有足够竖向空间完整展示 */
+      min-height: min(56vh, 560px);
+    }
+  }
+
+  .quiz-avatar-scene .quiz-avatar-video-canvas {
+    @apply w-full max-w-full;
+    max-height: min(30vh, 200px);
+  }
+
+  .quiz-avatar-scene--mobile .quiz-avatar-video-canvas {
+    /* 逻辑高度仍给足抠像绘制；scale 缩小显示，避免只剩头顶 */
+    max-height: min(20vh, 168px);
+    /* 再上移 0.5cm */
+    transform: translateY(calc(-58px - 0.5cm)) scale(0.5);
+    transform-origin: 50% 100%;
+  }
+
+  /* 手机端：强制视频 dock 也缩小，避免撑出外层覆盖题目 */
+  .quiz-avatar-scene--mobile .quiz-avatar-dock-root {
+    min-height: min(calc(11vh + 4.5cm), calc(100px + 4.5cm));
+    max-height: min(calc(11vh + 4.5cm), calc(100px + 4.5cm));
+    overflow: hidden;
+    justify-content: flex-start;
+    padding-top: 2px;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-avatar-scene .quiz-avatar-video-canvas {
+      max-height: min(38vh, 320px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-avatar-scene .quiz-avatar-video-canvas {
+      max-height: min(56vh, 560px);
+    }
+  }
+
+  /* 题号：手机更紧凑，仍保证可点区域 */
+  .quiz-question-nav .quiz-question-nav-hint {
+    @apply mb-2 text-[11px] leading-snug text-slate-500;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-question-nav .quiz-question-nav-hint {
+      @apply mb-3;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .quiz-question-nav .quiz-question-nav-hint {
+      @apply line-clamp-2;
+    }
+  }
+
+  .quiz-question-nav .quiz-question-nav-grid {
+    @apply grid grid-cols-4 gap-1.5;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-question-nav .quiz-question-nav-grid {
+      @apply gap-2;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-question-nav .quiz-question-nav-grid {
+      @apply grid-cols-4;
+    }
+  }
+
+  .quiz-question-nav .quiz-question-nav-grid > button {
+    @apply flex min-h-[2.25rem] items-center justify-center rounded-lg text-xs font-semibold transition-colors sm:text-sm;
+    min-width: 2.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-question-nav .quiz-question-nav-grid > button {
+      @apply min-h-9;
+    }
+  }
+
+  /* 场景内 GLB：透明底、无画框，高度随断点 */
+  .quiz-avatar-scene-glb {
+    @apply mx-0 w-full max-w-none overflow-hidden bg-transparent;
+    height: min(30vh, 220px);
+    min-height: 180px;
+  }
+
+  .quiz-avatar-scene--mobile .quiz-avatar-scene-glb {
+    height: min(calc(11vh + 4.5cm), calc(100px + 4.5cm));
+    min-height: calc(92px + 4.5cm);
+  }
+
+  /* 手机端：3D Canvas 与视频路径同一垂直偏移逻辑 */
+  .quiz-avatar-scene--mobile .quiz-avatar-scene-glb canvas {
+    transform: translateY(calc(-34px - 0.5cm)) scale(0.5);
+    transform-origin: 50% 100%;
+  }
+
+  @media (min-width: 768px) {
+    .quiz-avatar-scene-glb {
+      height: min(36vh, 320px);
+      min-height: 240px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .quiz-avatar-scene-glb {
+      /* 3D 侧栏同样给足高度，避免只剩头部 */
+      height: min(56vh, 560px);
+      min-height: 420px;
+    }
+  }
+}

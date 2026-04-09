@@ -1,0 +1,46 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+.env
+.env*.local
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# prisma / sqlite（常见 DATABASE_URL=file:./dev.db 在仓库根目录）
+prisma/*.db
+prisma/*.db-journal
+/dev.db
+/dev.db-journal
+
+# 本地临时：docx 解压痕迹、试录音频（勿提交进仓库）
+_docx_extract/
+_docx_tmp.zip
+_test-*.mp3
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

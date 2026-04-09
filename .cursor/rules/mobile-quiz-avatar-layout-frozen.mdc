@@ -1,0 +1,42 @@
+---
+description: 答题页手机端（<768px）数字人区域布局与 CSS 参数已验收锁定；非用户明确要求禁止改动
+globs: app/globals.css, app/quiz/**/quiz-play.tsx, components/quiz/QuizAvatarHost.tsx, components/quiz/QuizSessionAvatarDock.tsx
+---
+
+# 手机端答题页数字人 — **已验收版本快照**（记忆用）
+
+**范围**：视口 `< 768px` 时，`quiz-play.tsx` 在题目卡片**上方**渲染 `quiz-avatar-scene quiz-avatar-scene--mobile`，侧栏内数字人 `max-[767px]:hidden`。
+
+**约定**：下列数值为用户确认的版本。**禁止**在未获用户**明确指令**时改动（含「顺手微调」）。
+
+---
+
+## 1. 可视槽位（`app/globals.css`）
+
+| 选择器 | 锁定规则 |
+|--------|----------|
+| `.quiz-avatar-scene--mobile` | `min-height: min(calc(11vh + 4.5cm), calc(100px + 4.5cm))`；`overflow: hidden`；边距/内边距保持文件内现状 |
+| `.quiz-avatar-scene--mobile .quiz-avatar-dock-root` | `min-height` / `max-height` 同上；`overflow: hidden`；`justify-content: flex-start`；`padding-top: 2px` |
+| `.quiz-avatar-scene--mobile .quiz-avatar-scene-glb` | `height` 同上；`min-height: calc(92px + 4.5cm)` |
+
+---
+
+## 2. 缩放与垂直偏移（`app/globals.css`）
+
+| 选择器 | 锁定规则 |
+|--------|----------|
+| `.quiz-avatar-scene--mobile .quiz-avatar-video-canvas` | `max-height: min(20vh, 168px)`；`transform: translateY(calc(-58px - 0.5cm)) scale(0.5)`；`transform-origin: 50% 100%` |
+| `.quiz-avatar-scene--mobile .quiz-avatar-scene-glb canvas` | `transform: translateY(calc(-34px - 0.5cm)) scale(0.5)`；`transform-origin: 50% 100%` |
+
+---
+
+## 3. 结构（`app/quiz/[sessionId]/quiz-play.tsx`）
+
+- 手机：`className="quiz-avatar-scene quiz-avatar-scene--mobile min-[768px]:hidden"` 包裹 `QuizAvatarHost`（`layout="sidebar"`），位于 `QuestionCard` 之前。
+- 平板/桌面：侧栏 `.quiz-avatar-scene max-[767px]:hidden` 内 `QuizAvatarHost`，与上互斥。
+
+---
+
+## 4. 修改方式
+
+若用户只要求改一项，仅改其点名的 CSS/结构，并**同步更新本文件对应表格**，避免与「记忆版本」漂移。

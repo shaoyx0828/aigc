@@ -1,0 +1,104 @@
+// 中天火箭在线答题 — SQLite + Prisma
+// questionOrder：本场答题的题目 id 顺序（开始答题时固化，避免中途题库变更影响场次）
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum QuestionType {
+  single_choice
+  true_false
+  short_answer
+}
+
+enum Difficulty {
+  easy
+  medium
+  hard
+}
+
+enum ReviewStatus {
+  draft
+  reviewed
+  needs_review
+}
+
+enum SourceChannel {
+  link
+  qrcode
+  other
+}
+
+enum AnswerMethod {
+  text
+  voice
+}
+
+model Question {
+  id              String         @id @default(cuid())
+  category        String
+  type            QuestionType
+  difficulty      Difficulty
+  question        String
+  aliases         String         @default("")
+  canonicalAnswer String
+  avatarAnswer    String         @default("")
+  optionA         String         @default("")
+  optionB         String         @default("")
+  optionC         String         @default("")
+  optionD         String         @default("")
+  correctOption   String         @default("")
+  keywords        String         @default("")
+  explanation     String         @default("")
+  score           Int            @default(10)
+  timeLimitSec    Int            @default(180)
+  enabled         Boolean        @default(true)
+  sourceDoc       String         @default("")
+  sourceVersion   String         @default("")
+  reviewStatus    ReviewStatus   @default(draft)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  answers         QuizAnswer[]
+}
+
+model QuizSession {
+  id               String         @id @default(cuid())
+  /// 答题者姓名（展示用，允许重名；身份以 phone 区分）
+  nickname         String
+  /// 11 位手机号，唯一参与依据；后台与导出可区分同名用户
+  phone            String         @default("")
+  sourceChannel    SourceChannel
+  startedAt        DateTime       @default(now())
+  finishedAt       DateTime?
+  totalScore       Int            @default(0)
+  totalDurationSec Int            @default(0)
+  correctCount     Int            @default(0)
+  wrongCount       Int            @default(0)
+  /// JSON 数组：题目 id 顺序，例如 ["clx...","clx..."]
+  questionOrder    Json
+  createdAt        DateTime       @default(now())
+  answers          QuizAnswer[]
+}
+
+model QuizAnswer {
+  id               String        @id @default(cuid())
+  sessionId        String
+  questionId       String
+  userAnswerText   String        @default("")
+  normalizedAnswer String        @default("")
+  isCorrect        Boolean
+  scoreAwarded     Int           @default(0)
+  durationSec      Int           @default(0)
+  answerMethod     AnswerMethod
+  createdAt        DateTime      @default(now())
+  session          QuizSession   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  question         Question      @relation(fields: [questionId], references: [id], onDelete: Restrict)
+
+  @@index([sessionId])
+  @@index([questionId])
+}

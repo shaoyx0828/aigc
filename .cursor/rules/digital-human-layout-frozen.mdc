@@ -1,0 +1,115 @@
+---
+description: 答题页 3D 数字人展示区已最终冻结（尺寸、样式、机位、灯光）；非用户明确要求禁止修改
+globs: components/digital-human/**/*.tsx, app/quiz/**/quiz-play.tsx
+---
+
+# 数字人展示 — **最终冻结清单**（验收版）
+
+**生效约定**：用户已确认当前效果为最终版。**禁止**在未获用户**明确书面/对话指令**的情况下，改动下列任何一项（含「顺手优化」「微调观感」「统一风格」等理由）。
+
+---
+
+## 1. 外层 HTML 容器（`DigitalHumanScene.tsx` 根 `div`）
+
+| 项 | 锁定值 |
+|----|--------|
+| 最大宽 | `max-w-md`（28rem） |
+| 高度 | `h-[248px]` / `sm:h-[272px]` / `lg:h-[296px]` |
+| 背景 | `bg-[var(--background)]`（与 `globals.css` `:root --background` 一致） |
+| 布局 | `mx-auto w-full shrink-0 overflow-hidden` |
+| **禁止** | 圆角、border、box-shadow、与页面背景不一致的实色底 |
+
+**同步**：`app/quiz/[sessionId]/quiz-play.tsx` 中 `dynamic(..., { loading })` 占位 **必须与上表高度/宽度/背景 class 完全一致**。
+
+---
+
+## 2. Canvas 与默认相机（`DigitalHumanScene.tsx`）
+
+| 项 | 锁定值 |
+|----|--------|
+| `shadows` | 开启 |
+| `dpr` | `[1, 2]` |
+| `gl` | `antialias: true`, `alpha: true` |
+| 初始 `camera.position` | `[0, FRAMING_FALLBACK_METRICS.centerWorldY, 3.4]`（y = `5.52 * 0.5`） |
+| 初始 `camera.fov` | `47` |
+| `near` / `far` | `0.1` / `100` |
+
+---
+
+## 3. `computeDigitalHumanCameraLayout`（`DigitalHumanScene.tsx`）
+
+| 常量 | 锁定值 |
+|------|--------|
+| `FOV_DEG` | `47` |
+| `vertPad` | `0.026`（`vertHalfSpan = h * (0.5 + vertPad)`） |
+| 水平半幅基数 | `metrics.width * 0.5 + max(h * 0.038, metrics.width * 0.042)` |
+| `halfH` | `min(hFovRad / 2, 1.52)` |
+| 距离合成 | `dist = max(dVert, min(dHoriz, dVert * 1.18))` |
+| `dist` clamp | `[h * 0.48, h * 2.85]` |
+| 相机 | `position.y = lookAt.y = metrics.centerWorldY`（缺省回退 `h*0.5`）；`camera.up = (0,1,0)`；`SceneRig` 用 **`useLayoutEffect`** |
+
+**逻辑锁定**：须保留 **`centerWorldY` + 世界 `Box3` on `fit`** 的 metrics 管线；勿改回纯 `height/2` 胸口 lookAt。
+
+---
+
+## 4. `FRAMING_FALLBACK_METRICS`（无 GLB / 首帧）
+
+| 字段 | 锁定值 |
+|------|--------|
+| `height` | `DIGITAL_HUMAN_TARGET_WORLD_HEIGHT`（5.52） |
+| `width` | `1.12` |
+| `depth` | `0.88` |
+| `centerWorldY` | `5.52 * 0.5` |
+| `chestY` / `headY` | `5.52 * 0.58` / `5.52 * 0.88` |
+
+---
+
+## 5. `LoadingCapsuleMesh`
+
+| 项 | 锁定值 |
+|----|--------|
+| `r` | `0.62` |
+| `len` | `max(0.35, h - 2*r)`（`h` = fallback height） |
+| `position` | `[0, cy, 0]`，`cy = len/2 + r` |
+| `capsuleGeometry` | `args={[r, len, 8, 18]}` |
+| 材质 | `color="#cbd5e1"`, `roughness={0.55}` |
+
+---
+
+## 6. `DigitalHumanModel.tsx`
+
+| 项 | 锁定值 |
+|----|--------|
+| `DIGITAL_HUMAN_TARGET_WORLD_HEIGHT` | **`5.52`** |
+| metrics | 摆放后以 **`Box3.setFromObject(fit)`** 为准输出 `height/width/depth/centerWorldY`；`chestY`/`headY` 按 `minY + height * 0.58` / `0.88` |
+
+---
+
+## 7. 灯光（`DigitalHumanScene.tsx`）
+
+**主光 / 补光 / 环境**（锁定）：
+
+- `directionalLight` `[3.5, 7.5, 4]`，`intensity 1.2`，`castShadow`
+- `directionalLight` `[-4, 2.5, 2]`，`intensity 0.35`
+- `ambientLight` `intensity 0.45`
+
+**轮廓光**（锁定位置；颜色与强度随状态变化为产品设计一部分，亦勿改数值除非用户要求）：
+
+- `position={[0, 6, -5]}`
+- `stateToRimColor` 各色值与 `rimIntensity` 分档（greeting 1.05 … idle 0.8）保持现状
+
+---
+
+## 8. 地面与阴影
+
+- **禁止**加回 `ContactShadows`、脚底半透明圆盘 mesh（曾造成腰间灰带）。
+
+---
+
+## 9. `DigitalHumanPlaceholder.tsx`
+
+- 须继续与 **`DIGITAL_HUMAN_TARGET_WORLD_HEIGHT`** 及 **世界 Box3 on `fitRef`** 上报逻辑一致；勿单独改 `metricsH`/几何导致与主模型机位脱节。
+
+---
+
+若用户明确要求「只改一项」，仅改其点名的那一项，并同步更新本文件对应表格。
